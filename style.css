@@ -1,0 +1,25 @@
+:root {
+    --primary:;
+    --secondary:;
+    --tertiary:;
+
+    --icon-size:30px;
+}
+
+html,body{
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width:var(--icon-size);
+    height:var(--icon-size);
+}
+
+ul{
+    list-style: none;
+}
