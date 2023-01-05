@@ -5,6 +5,8 @@
     --element-bg: #262b2e;
     --main-section-bg: #1f2427;
     --accent: #6123f6;
+    --accent-hover: #6223f6b7;
+    --accent-active: #6223f650;
     --text-color: white;
     --text-color-2: #3A4243;
 
@@ -170,6 +172,11 @@ button {
 
 button:hover {
     cursor: pointer;
+    background-color: var(--accent-hover);
+}
+
+button:active{
+    background-color: var(--accent-active);
 }
 
 main {
@@ -245,8 +252,11 @@ main {
     margin: 0;
 }
 
-.trending {
+.trending-section{
     grid-area: trending;
+}
+
+.trending {
     display: flex;
     flex-direction: column;
     gap: 20px;
