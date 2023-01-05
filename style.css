@@ -71,6 +71,14 @@ nav {
     border-left: var(--accent) 3px solid;
 }
 
+.nav-section a{
+    transition: 100ms border-left;
+}
+
+.nav-section a:hover {
+    border-left: var(--accent) 3px solid;
+}
+
 .dashboard-logo {
     font-size: 2rem;
     font-weight: 500;
@@ -104,6 +112,13 @@ header {
     padding-left: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
+    color: var(--text-color);
+    transition: 500ms transform;
+}
+
+input:focus{
+    outline: none;
+    transform: scale(1.05);
 }
 
 .active-user {
@@ -138,6 +153,14 @@ header {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.active-user-icon,
+.profile-user-icon,
+.trending-card,
+.project-icon,
+.search-container img{
+    cursor: pointer;
 }
 
 .profile-container {
