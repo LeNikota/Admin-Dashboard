@@ -2,7 +2,7 @@
 
 
 :root {
-    --sidebar-bg:#262b2e;
+    --element-bg:#262b2e;
     --main-section-bg:#1f2427;
     --accent:#6123f6;
     --text-color:white;
@@ -53,7 +53,7 @@ nav{
     gap: 30px;
     padding: 20px 0;
 
-    background-color: var(--sidebar-bg);
+    background-color: var(--element-bg);
 }
 
 .nav-section > ul > li > a{
@@ -97,7 +97,7 @@ header{
     border: none;
     border-radius: 10px;
     height: 40px;
-    background-color: var(--sidebar-bg);
+    background-color: var(--element-bg);
     padding-left: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
@@ -128,6 +128,13 @@ header{
     background: url(./icon/niko.png);
     background-position: center;
     background-size: cover;
+}
+
+.user-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; 
 }
 
 .profile-container{
@@ -180,15 +187,18 @@ main{
     grid-column: 1 / -1; 
 }
 
-.projects{
+.user-projects{
     grid-area: project;
+}
+
+.projects{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
     gap: 40px;
 }
 
 .project{
-    background-color: var(--sidebar-bg);
+    background-color: var(--element-bg);
     border-radius: 30px;
     padding: 20px;
 
@@ -219,13 +229,37 @@ main{
 }
 
 .announcements{
-    background-color: var(--sidebar-bg);
+    background-color: var(--element-bg);
     border-radius: 20px;
     padding: 30px;
+    display: grid;
+    gap: 20px;
 }
 
-.announcement-card
+.announcement:not(:last-child){
+    border-bottom: var(--main-section-bg) 2px solid;
+}
+
+.announcement h4{
+    margin: 0;
+}
 
 .trending{
     grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--element-bg);
+    padding: 20px 30px;
+}
+
+.trending-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.id{
+    margin-bottom: 5px;
+    font-weight: bolder;
 }
