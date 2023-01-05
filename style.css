@@ -49,6 +49,8 @@ a{
 nav{
     grid-area: nav;
     display: grid;
+    align-content: start;
+    gap: 30px;
     padding: 20px 0;
 
     background-color: var(--sidebar-bg);
@@ -158,9 +160,72 @@ button{
     color: var(--text-color);
 }
 
-
+button:hover{
+    cursor: pointer;
+}
 
 main{
     grid-area: main;
     background-color: var(--main-section-bg);
+    padding: 60px 40px;
+    display: grid;
+    gap: 50px;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: 
+    "project announcement"
+    "project trending";
+}
+
+.section-name{
+    grid-column: 1 / -1; 
+}
+
+.projects{
+    grid-area: project;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 40px;
+}
+
+.project{
+    background-color: var(--sidebar-bg);
+    border-radius: 30px;
+    padding: 20px;
+
+    display: grid;
+    align-content: space-between;
+    gap: 20px;
+}
+
+.project-icon{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+}
+
+.project-icon > img {
+    width: calc(var(--icon-size) - 10px);
+    height: calc(var(--icon-size) - 10px);
+}
+
+
+.project-icon > img:hover {
+    cursor: pointer;
+}
+
+
+.announcements-section{
+    grid-area: announcement;
+}
+
+.announcements{
+    background-color: var(--sidebar-bg);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.announcement-card
+
+.trending{
+    grid-area: trending;
 }
